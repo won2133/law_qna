@@ -5,7 +5,7 @@ from modules import str_to_vector, return_answer
 bp = Blueprint('main', __name__, url_prefix='/')
 
 
-df = pd.read_csv('/mnt/c/users/shfks/ai 허브 데이터/pan_qna_kkm_sbert.csv')
+df = pd.read_csv('파일 위치/pan_qna_kkm_sbert.csv')
 print(df.head())
 df['emd'] = df.apply(lambda x: str_to_vector(x['embedding']), axis=1)
 
